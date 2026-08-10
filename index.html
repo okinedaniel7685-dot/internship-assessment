@@ -6,7 +6,7 @@
 <title>Pre-Internship Engagement Competency Self-Assessment</title>
 <style>
   * { box-sizing: border-box; }
-  body {
+  body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #f3f6fa;
@@ -401,6 +401,22 @@ function resetForm() {
 });
 
 calculateResults();
+</script>
+
+
+
+ <script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./service-worker.js")
+            .then(function () {
+                console.log("Service Worker registered successfully");
+            })
+            .catch(function (error) {
+                console.log("Service Worker registration failed:", error);
+            });
+    });
+}
 </script>
  
 <footer style="
